@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Table Database</title>
+    <title>Handlebars Table and Form</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Latest compiled and minified CSS -->
@@ -15,10 +15,34 @@
   </head>
   <body>
     <header>
-      <h1>Favorite Cities</h1> 
+      <h1>Favorite Cities Using Handlebars</h1> 
     </header>
     
-    <div></div>
+    <button type="button" id="addNewItem">Add New Item</button>
+    
+    <div id="main">
+    </div>
+      
+    <script id="table" type="text/x-handlebars-template">
+      <table>
+        <thead>
+          <tr><th>{{col}}</th></tr>
+        </thead>
+        <tbody>
+          {{{row}}}
+        </tbody>
+      </table>
+    </script>
+
+  <script id="form" type="text/x-handlebars-template">
+    <form>
+      <fieldset>
+        <label>{{label}}</label>
+        <input type="text" id="input"/>
+        <button type="button" id="submit">Submit</button>
+      </fieldset>
+    </form>
+  </script>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -30,6 +54,8 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     
     <script src="script.js"></script>
   </body>
